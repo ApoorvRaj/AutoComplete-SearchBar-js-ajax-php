@@ -1,0 +1,42 @@
+<html>
+<head>
+</head>
+<body>
+<h2>AutoCompleteSearch Bar</h2>
+<form>
+<input type="text" id="fname">
+<br>
+<br>
+<input type="button" value="Search" onclick="myfun()">
+<input type="reset">
+</form>
+<p id="p1"></p>
+</input>
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script>
+
+function myfun(){
+var t = $('#fname').val();
+var y = document.getElementById("p1").innerHTML="You Searched For: "+t;
+}
+document.getElementById("fname").addEventListener("keyup",myFunction);
+function myFunction(){
+var term=$('#fname').val();
+$.ajax({
+url:'http://localhost/student/searchphp.php',
+method:'get',
+data:{name:term},
+success:function(data)
+{
+
+},
+error:function(data)
+{
+alert("error");
+}
+});
+
+}
+</script>
+</body>
+</html>
