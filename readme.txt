@@ -1,0 +1,1 @@
+Auto complete search bar functionality that provides predicated search results list to the user as and when user types something which allows user to use one of the provided options. 
